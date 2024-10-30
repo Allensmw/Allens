@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick-Raps.com | Tour</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff00ff;
+        }
+
+        .page-title {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 4rem;
+            text-align: center;
+            padding: 100px 0 50px;
+            text-shadow: 2px 2px 4px rgba(255, 0, 255, 0.5);
+        }
+
+        .tour-dates {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-bottom: 50px;
+        }
+
+        .tour-date {
+            background-color: #111;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .tour-date:hover {
+            transform: translateY(-5px);
+        }
+
+        .tour-date-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .tour-date-info .date {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff00ff;
+        }
+
+        .tour-date-info .location {
+            font-size: 1.2rem;
+        }
+
+        .ticket-button {
+            padding: 10px 20px;
+            background-color: #ff00ff;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .ticket-button:hover {
+            background-color: #cc00cc;
+        }
+
+        .tour-map {
+            width: 100%;
+            
+            height: 400px;
+            background-color: #222;
+            margin-bottom: 50px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        footer {
+            background-color: #111;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff00ff;
+        }
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 3rem;
+            }
+
+            .tour-date {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .tour-date-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .ticket-button {
+                align-self: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../musicPage/musicPage.html">Music</a></li>
+                <li><a href="tourPage.html">Tour</a></li>
+                <li><a href="../contactPage/contactPage.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Nick-Raps Tour</h1>
+        <div class="container">
+            <div class="tour-map">
+                <!-- Replace this with an actual map or image of tour locations -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24193.636380611337!2d-74.01296174071059!3d40.71277032812767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1625764215676!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="tour-dates">
+                <div class="tour-date">
+                    <div class="tour-date-info">
+                        <span class="date">Jul 15</span>
+                        <span class="location">New York, NY - Madison Square Garden</span>
+                    </div>
+                    <a href="#" class="ticket-button">Get Tickets</a>
+                </div>
+                <div class="tour-date">
+                    <div class="tour-date-info">
+                        <span class="date">Jul 22</span>
+                        <span class="location">Los Angeles, CA - Staples Center</span>
+                    </div>
+                    <a href="#" class="ticket-button">Get Tickets</a>
+                </div>
+                <div class="tour-date">
+                    <div class="tour-date-info">
+                        <span class="date">Aug 05</span>
+                        <span class="location">Chicago, IL - United Center</span>
+                    </div>
+                    <a href="#" class="ticket-button">Get Tickets</a>
+                </div>
+                <div class="tour-date">
+                    <div class="tour-date-info">
+                        <span class="date">Aug 12</span>
+                        <span class="location">Miami, FL - American Airlines Arena</span>
+                    </div>
+                    <a href="#" class="ticket-button">Get Tickets</a>
+                </div>
+                <div class="tour-date">
+                    <div class="tour-date-info">
+                        <span class="date">Aug 19</span>
+                        <span class="location">Houston, TX - Toyota Center</span>
+                    </div>
+                    <a href="#" class="ticket-button">Get Tickets</a>
+                </div>
+                <div class="tour-date">
+                    <div class="tour-date-info">
+                        <span class="date">Aug 26</span>
+                        <span class="location">Atlanta, GA - State Farm Arena</span>
+                    </div>
+                    <a href="#" class="ticket-button">Get Tickets</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-spotify"></i></a>
+            </div>
+            <p>&copy; 2023 Nick-Raps. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+                } else {
+                    header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
