@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Allen's</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Dashboard</a></li>
+                    <li><a href="products/products.html">Products</a></li>
+                    <li><a href="orders/orders.html">Orders</a></li>
+                    <li><a href="customers/customers.html">Customers</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="summary">
+                <div class="card">
+                    <h2>Total Sales</h2>
+                    <p class="number">MWK <span id="totalSales">0</span></p>
+                </div>
+                <div class="card">
+                    <h2>Orders</h2>
+                    <p class="number"><span id="totalOrders">0</span></p>
+                </div>
+                <div class="card">
+                    <h2>Customers</h2>
+                    <p class="number"><span id="totalCustomers">0</span></p>
+                </div>
+            </section>
+            <section class="recent-orders">
+                <h2>Recent Orders</h2>
+                <table id="orderTable">
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Order rows will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

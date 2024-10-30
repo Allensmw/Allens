@@ -1,0 +1,730 @@
+body {
+    font-family: 'Assistant', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* General Styles */
+body, h1, h2, h3, p, ul, li, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.welcoming-image {
+    position: relative; /* Make this a positioning context */
+    text-align: center; /* Center the text */
+}
+
+.welcoming-image img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    filter: blur(3px); /* Apply blur with 5px radius */
+}
+
+.welcome-overlay {
+    position: absolute; /* Position it absolutely within the parent */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust the position to be centered */
+    color: white; /* Text color */
+}
+
+.welcome-overlay h2 {
+    font-size: 40px; /* Adjust size as needed */
+    margin-bottom: 10px; /* Space below the heading */
+    font-weight: 500;
+}
+
+.shop-all-button {
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.shop-button {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    padding: 14px 24px;
+    font-size: 1.2em;
+    transition: transform 0.3s, border-color 0.3s; /* Transition for transform and border */
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Scale border on hover */
+.shop-button:hover {
+    transform: scale(1.05); /* Scale the button slightly */
+    border-color: white; /* Change border color to white on hover */
+    border-style: solid; /* Make the border visible */
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.menu-button svg {
+    width: 20px;
+    height: 20px;
+    fill: #000; /* Default color */
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.menu-button:hover svg {
+    transform: scale(1.2); /* Slight scale*/
+}
+
+.menu-button:active svg {
+    transform: scale(1.1); /* Slightly reduce size on click */
+}
+
+/* Search Button */
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 10px;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.search-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #000; /* Default color */
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.search-button:hover svg {
+    transform: scale(1.2); /* Slight scale */
+}
+
+.search-button:active svg {
+    transform: scale(1.1); /* Slightly reduce size on click */
+}
+
+
+/* Cart Button */
+.cart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.3s ease, fill 0.3s ease; /* Smooth transition */
+}
+
+.cart-button svg {
+    width: 54px;
+    height: 54px;
+    margin-bottom: -20px;
+    fill: #000; /* Default color */
+    transition: transform 0.3s ease, fill 0.3s ease; /* Smooth transitions for hover */
+}
+
+.cart-button:hover svg {
+    transform: scale(1.2); /* Scale slightly on hover */
+}
+
+.cart-button:active svg {
+    transform: scale(1.1); /* Slightly reduce scale on click */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-top: 1px solid #ecebeb; /* Add top border */
+    border-bottom: 1px solid #ecebeb; /* Add top border */
+}
+
+/* Welcoming Image Section */
+.welcoming-image {
+    margin-top: 80px; /* Adjust this value to match the height of your navbar */
+    position: relative; /* Makes this a positioning context */
+    text-align: center; /* Center the text */
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: opacity 0.5s ease, top 0.3s ease; /* Add transition for opacity */
+    z-index: 1000;
+    background-color: #fff; /* Add background color to make the fade-out visible */
+}
+
+.menu-button, .search-button, .cart-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Logo Styles */
+.logo img {
+    height: 10px; /* Adjust height according to your logo */
+    width: auto;
+    padding-left: 70px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    cursor: pointer; /* Make it look clickable */
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+/* Default welcome section styles */
+.welcoming-image {
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.welcoming-image img {
+    width: 100%;
+    height: auto;
+    filter: blur(3px); /* Apply a slight blur */
+}
+
+/* Center the text and button */
+.welcome-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.welcome-overlay h2 {
+    font-size: 2.5rem; /* Responsive font size */
+    margin-bottom: 10px;
+}
+
+.shop-button {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 14px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect */
+.shop-button:hover {
+    transform: scale(1.05);
+}
+
+/* Media query for tablets */
+@media (max-width: 1024px) {
+    .welcome-overlay h2 {
+        font-size: 2rem; /* Smaller heading for tablets */
+    }
+
+    .shop-button {
+        font-size: 1rem; /* Smaller button for tablets */
+        padding: 12px 20px;
+    }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .welcome-overlay h2 {
+        font-size: 1.8rem; /* Smaller heading for mobile */
+    }
+
+    .shop-button {
+        font-size: 0.9rem; /* Smaller button for mobile */
+        padding: 10px 18px;
+    }
+}
+
+/* Media query for small mobile screens */
+@media (max-width: 480px) {
+    .welcome-overlay h2 {
+        font-size: 1.5rem; /* Smallest heading size */
+    }
+
+    .shop-button {
+        font-size: 0.8rem; /* Smallest button size */
+        padding: 8px 16px;
+    }
+}
+
+/* Ensuring grid and other sections align */
+.products-grid {
+    margin-top: 50px; /* Add margin above the product grid for spacing */
+}
+
+
+/* Featured Products */
+.featured-products {
+    padding: 40px 20px; /* Add padding for top/bottom */
+    background-color: #f9f9f9; /* Light background */
+    text-align: center;
+}
+
+.featured-products h3 {
+    font-size: 24px;
+    margin-bottom: 30px; /* Add space below heading */
+}
+
+.products-grid {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the grid container */
+}
+
+.product {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add light shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation for hover */
+    border-radius: 15px; /* Rounded corners */
+}
+
+.product:hover {
+    transform: translateY(-10px); /* Lift on hover */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.product img {
+    width: 250px; /* Increase width */
+    border-radius: 15px;
+    height: auto; /* Keep aspect ratio */
+    margin-bottom: 15px; /* Maintain space below the image */
+}
+
+
+.product-title {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0 5px;
+    font-weight: 600;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #000000; /* Tomato color for price */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 products per row for smaller screens */
+    }
+}
+
+/* Product Box Code*/
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 0fr);
+        margin-left: 15px;
+        transform: scale(0.55); /* Scale the grid container and its contents by 50% */
+        transform-origin: top left; 
+        margin-bottom: -1050px;
+    }    
+}
+
+
+/* Pagination Navigation */
+.pagination {
+    display: flex; /* Flexbox for layout */
+    justify-content: center; /* Center items */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+.pagination a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Text color */
+    padding: 10px 20px; /* Padding for the links */
+    border: 1px solid #ddd; /* Border around the links */
+    border-radius: 5px; /* Rounded corners */
+    margin: 0 10px; /* Margin between buttons */
+    width: 120px; /* Fixed width for all buttons */
+    text-align: center; /* Center text in buttons */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+/* Hover Effect */
+.pagination a:hover {
+    background-color: #ff6347; /* Change background on hover */
+    color: white; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly scale the button on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .pagination a {
+        padding: 8px 16px; /* Smaller padding for mobile */
+        font-size: 14px; /* Smaller font size for mobile */
+        width: 100px; /* Adjusted width for mobile */
+    }
+}
+
+
+/* Subscribe Section */
+.subscribe-section {
+    background-color: #ffffff; /* Light background color */
+    padding: 20px; /* Add some padding */
+    text-align: center; /* Center-align text */
+    margin-top: 20px; /* Space above the section */
+    border: 1px solid #ddd; /* Border similar to the product section */
+    border-radius: 8px; /* Rounded corners */
+    padding: 50px;
+}
+
+.subscribe-section h3 {
+    font-size: 24px; /* Heading size */
+    margin-bottom: 10px; /* Space below heading */
+    font-weight: 600; /* Bold text */
+}
+
+.subscribe-section p {
+    margin-bottom: 15px; /* Space below paragraph */
+    color: #555; /* Slightly darker text color */
+}
+
+.subscribe-form {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items */
+    gap: 10px; /* Space between input and button */
+    padding: 15px;
+}
+
+.subscribe-form input {
+    padding: 15px; /* Inner space */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    width: 300px; /* Fixed width */
+}
+
+.subscribe-form button {
+    padding: 12px 20px; /* Inner space */
+    background-color: #ffffff; /* Button background color */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    color: rgb(94, 93, 93); /* Text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth background color change */
+}
+
+/* Hover Effect for Email Submit Button */
+.email-submit-button:hover {
+    background-color: #e5533d; /* Darker shade on hover */
+    color: white;
+    transform: scale(1.05); /* Slightly scale the button on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Footer */
+footer {
+    color: #535353;
+    text-align: left;
+    padding: 20px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+/* Search button */
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+}
+
+/* Search bar (hidden by default) */
+.search-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+/* Search input field */
+.search-bar input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Close search button */
+#close-search {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Show search bar when active */
+.search-bar.active {
+    display: flex;
+    opacity: 1;
+}
+
+/* Background blur effect */
+body.blurred::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 999; /* Behind search bar */
+}
+
+/* Style for the Close (X) Icon */
+#close-search .icon-close {
+    width: 18px;
+    height: 18px;
+    fill: #333; /* Icon color */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+/* Hover effect: scaling the icon */
+#close-search:hover .icon-close {
+    transform: scale(1.2); /* Scale up by 20% */
+}
+
+/* Menu Icon */
+.menu-icon {
+    cursor: pointer;
+}
+
+/* Overlay that covers the entire screen */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: -35%;
+    width: 35%;
+    height: 100%;
+    background: rgba(255, 255, 255); 
+    backdrop-filter: blur(5px); /* Blurs the background */
+    transform: translateY(0); /* Initially hide the menu above the screen */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding down */
+    z-index: 999; /* Keep it above all other elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden; /* Make it hidden by default */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .menu-overlay {
+        width: 100%; /* Full screen width on smaller screens */
+        left: -100%; /* Initially off-screen on the left for mobile */
+    }
+}
+
+/* When menu is active, slide in from the left */
+.menu-overlay.active {
+    transform: translateX(100%); /* Slide in from the left */
+    visibility: visible; /* Make it visible */
+}
+
+/* When the menu is active */
+.menu-overlay.active {
+    transform: translateX(100%); /* Slide the menu down */
+    visibility: visible; /* Make it visible */
+}
+
+/* Close button inside the menu */
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    cursor: pointer;
+    color:rgb(0, 0, 0);
+    transition: transform 0.3s ease, color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+/* Hover effect for close button */
+.menu-close:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon */
+}
+
+/* login button inside the menu */
+.menu-login {
+    position: absolute;
+    top: 25px;
+    left: 45px;
+    cursor: pointer;
+    color:rgb(73, 73, 73);
+    transition: transform 0.3s ease, color 0.3s ease; /* Add transition for smooth hover effect */
+    width: 25px; /* Set desired width */
+    height: 25px;
+}
+
+.menu-login svg {
+    width: 100%; 
+    height: 100%;
+}
+
+
+/* Hover effect for close button */
+.menu-login:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon */
+}
+
+
+.menu-items ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    font-size: 15px;
+}
+
+
+.menu-items ul li:last-child {
+    border-bottom: none; /* Remove the border from the last item */
+}
+
+.menu-items ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: rgb(22, 22, 22); /* Set the text color */
+    display: block; /* Make the entire area clickable */
+    transition: color 0.3s ease; /* Transition for link color change */
+}
+
+/* Container for the menu items */
+.menu-items {
+    max-height: 80vh; /* Limit the height to 80% of the viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px; /* Add some padding for better spacing */
+    padding-right: 200px; 
+    margin: 0; /* Reset margin */
+}
+
+.menu-items ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.menu-items ul li {
+    padding: 8px 15px; /* Add padding for better spacing */
+    width: 350px;
+    text-align: left;
+}
+
+.menu-items ul li:last-child {
+    border-bottom: none; /* Remove the border from the last item */
+}
+
+.menu-items ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Set the text color */
+    display: block; /* Make the entire area clickable */
+    transition: color 0.3s ease; /* Transition for link color change */
+}
+
+.menu-items ul li a.active {
+    background-color: rgba(128, 128, 128, 0.151); /* Change background color for active link */
+}
+
+--
+.menu-items ul li {
+    list-style: none; /* Remove bullet points */
+}
+
+#activePage{
+    background-color: rgba(128, 128, 128, 0.080); /* Set background color on hover */
+}
+
+.menu-items ul li a {
+    display: block; /* Make the <a> fill the entire width of the <li> */
+    padding: 10px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.menu-items ul li:hover {
+    background-color: rgba(128, 128, 128, 0.080); /* Set background color on hover */
+}
+
+--
+
+/* Scrollbar Styling */
+.menu-items::-webkit-scrollbar {
+    width: 7px;
+}
+
+.menu-items::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.menu-items::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    margin-top: 20px;
+}
+

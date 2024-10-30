@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="shoppingCart.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <button class="menu-button">
+            <div class="menu-icon" id="menuIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16">
+                    <path fill="currentColor" d="M1 .5a.5.5 0 1 0 0 1h15.71a.5.5 0 0 0 0-1zM.5 8a.5.5 0 0 1 .5-.5h15.71a.5.5 0 0 1 0 1H1A.5.5 0 0 1 .5 8m0 7a.5.5 0 0 1 .5-.5h15.71a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5"></path>
+                </svg>
+            </div>
+            
+            <div class="menu-overlay" id="menuOverlay">
+                <div class="menu-login" id="menulogin">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="icon icon-profile" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12 12c2.67 0 8 1.34 8 4v1H4v-1c0-2.66 5.33-4 8-4zm0-2C9.79 10 8 8.21 8 6s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path>
+                    </svg>
+                </div>
+                
+                <div class="menu-close" id="menuClose">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" class="icon icon-close" viewBox="0 0 18 17">
+                        <path fill="currentColor" d="M.865 15.978a.5.5 0 0 0 .707.707l7.433-7.431 7.579 7.282a.501.501 0 0 0 .846-.37.5.5 0 0 0-.153-.351L9.712 8.546l7.417-7.416a.5.5 0 1 0-.707-.708L8.991 7.853 1.413.573a.5.5 0 1 0-.693.72l7.563 7.268z"></path>
+                    </svg>
+                </div>
+                <nav class="menu-items">
+                    <ul>
+                        <li id="activePage"><a href="index.html">Home</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Computers</a></li>
+                        <li><a href="#">Smart Home</a></li>
+                        <li><a href="#">Arts & Craft</a></li>
+                        <li><a href="#">Baby</a></li>
+                        <li><a href="#">Women's Fashion</a></li>
+                        <li><a href="#">Men's Fashion</a></li>
+                        <li><a href="#">Fashion For Girls</a></li>
+                        <li><a href="#">Fashion For Boys</a></li>
+                        <li><a href="#">Luxury</a></li>
+                        <li><a href="#">Luggage</a></li>
+                        <li><a href="#">Beauty & Personal Care</a></li>
+                        <li><a href="#">Health & Household</a></li>
+                        <li><a href="#">Pet Supplies</a></li>
+                        <li><a href="#">Home & Kitchen</a></li>
+                        <li><a href="#">Tools & Home Improvement</a></li>
+                        <li><a href="#">Sports & Outdoors</a></li>
+                        <li><a href="#">Toys & Games</a></li>
+                        <li><a href="#">Automatives</a></li>
+                        <li><a href="#">Anime Merch</a></li>
+                        <li><a href="#">Sneakers</a></li>
+                        <li><a href="#">Shisha Haven</a></li>
+                        <li><a href="#">420 Store</a></li>
+                        <li><a href="#">Gadgets & Accessories</a></li>
+                        <li><a href="#">Gift & Occasions</a></li>
+                        <li><a href="#">Adult Products</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </button>
+
+
+        <!-- Logo Section: Clicking the logo will redirect to homepage -->
+        <a href="../index.html" class="logo">
+            <img src="../allensLogo.png" alt="Allen's Logo" style="height: 50px; margin-left: -75px;">
+        </a>
+
+        <div class="icons" style="margin-right: 40px">
+          <!-- Search Button with SVG Icon -->
+          <button class="search-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20">
+                  <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 1 1 2.85 3.5a5.784 5.784 0 0 1 8.18 8.18m.26 1.12a6.78 6.78 0 1 1 .72-.7l5.4 5.4a.5.5 0 1 1-.71.7z"></path>
+              </svg>
+          </button>            
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cart">
+            <div id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">MWK 0.00</span>
+            </div>
+            <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Subscribe Section -->
+    <section class="subscribe-section">
+        <h3>Subscribe to our emails</h3>
+        <p>Stay updated with our latest offers and products.</p>
+        <div class="subscribe-form">
+            <input type="email" placeholder="Email" required>
+            <button class="email-submit-button" type="submit">→</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Allen's. All Rights Reserved.</p>
+    </footer>
+
+    <script src="shoppingCart.js"></script>
+
+</body>
+</html>
